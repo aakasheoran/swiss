@@ -92,6 +92,7 @@ pub fn display_file_content(args: &[String]) -> io::Result<()> {
             print!("{}", escaped);
         }
     }
+    println!("");
     for _ in 0..100 {
         print!("{}", sep_char_escaped);
     }
