@@ -36,12 +36,12 @@ pub fn display_file_content(args: &[String]) -> io::Result<()> {
         std::process::exit(0);
     }
 
-    let mut sep_char = '+';
+    let mut sep_char = '=';
     for arg in args {
         if arg.starts_with("--sep-char=") || arg.starts_with("-c=") {
             let parts: Vec<&str> = arg.split('=').collect();
             if parts.len() == 2 {
-                let ch = parts[1].chars().next().unwrap_or('+');
+                let ch = parts[1].chars().next().unwrap_or('=');
                 if ALLOWED_SEP_CHARS.contains(&ch) {
                     sep_char = ch;
                 } else {
