@@ -1,0 +1,7 @@
+[package]
+name = "swiss"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+syntect = "5.2.0"
